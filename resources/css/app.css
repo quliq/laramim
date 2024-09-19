@@ -1,3 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/* Font Awesome */
+/* @import '~@fortawesome/fontawesome-free/css/brands.css';
+@import '~@fortawesome/fontawesome-free/css/regular.css';
+@import '~@fortawesome/fontawesome-free/css/solid.css';
+@import '~@fortawesome/fontawesome-free/css/fontawesome.css'; */
+@import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+/* Variables */
+/* @import 'variables'; */
+
+/* Third Party */
+@import '../../node_modules/icheck-bootstrap/icheck-bootstrap.min.css';
+@import '../../node_modules/@fontsource/source-sans-3/index.css';
+@import '../../node_modules/overlayscrollbars/styles/overlayscrollbars.min.css';
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+
+
+/* Bootstrap */
+/* @import '~bootstrap/scss/bootstrap'; */
+/* @import '../../node_modules/bootstrap/dist/css/bootstrap.css'; */
+/* @import 'bootstrap/scss/bootstrap'; */
+
+/* AdminLTE */
+@import '../../node_modules/admin-lte/dist/css/adminlte.css';

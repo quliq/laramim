@@ -1,7 +1,10 @@
+// Default Laravel bootstrapper, installs axios
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+// Added: Actual Bootstrap JavaScript dependency
+import 'bootstrap';
 
-window.Alpine = Alpine;
+// Added: Popper.js dependency for popover support in Bootstrap
+import '@popperjs/core';
 
-Alpine.start();
+import 'admin-lte';
