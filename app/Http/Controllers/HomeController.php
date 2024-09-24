@@ -12,7 +12,7 @@ class HomeController extends Controller
      */
     public function index(Request $request): View
     {
-        return view('welcome', [
+        return view('auth.login4', [
             'user' => $request->user(),
         ]);
     }
