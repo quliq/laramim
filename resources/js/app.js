@@ -1,5 +1,5 @@
 // Default Laravel bootstrapper, installs axios
-import './bootstrap';
+// import './bootstrap';
 
 // Added: Actual Bootstrap JavaScript dependency
 import 'bootstrap';
