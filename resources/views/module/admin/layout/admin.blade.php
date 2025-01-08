@@ -27,24 +27,16 @@
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary"> <!--begin::App Wrapper-->
     <div class="app-wrapper">
         <!--begin::Header-->
-        @include('admin.navbar')
+        @include('module.admin.include.navigation.navbar')
 
-        @include('admin.sidebar')
+        @include('module.admin.include.navigation.sidebar')
 
         <!--begin::App Main-->
         <main class="app-main">
             {{ $slot }}
         </main>
 
-        <footer class="app-footer"> <!--begin::To the end-->
-            <div class="float-end d-none d-sm-inline">Anything you want</div> <!--end::To the end-->
-            <!--begin::Copyright--> <strong>
-                Copyright &copy; 2014-2024&nbsp;
-                <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
-            </strong>
-            All rights reserved.
-            <!--end::Copyright-->
-        </footer> <!--end::Footer-->
+        @include('module.admin.include.footer.footer')
     </div> <!--end::App Wrapper-->
     <!--begin::Script-->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->

@@ -2,13 +2,19 @@
     <div class="sidebar-brand"> <!--begin::Brand Link--> <a href="./index.html" class="brand-link">
             <!--begin::Brand Image--> <img src="{{ asset("assets/img/logo/AdminLTELogo.png") }}" alt="AdminLTE Logo"
                 class="brand-image opacity-75 shadow"> <!--end::Brand Image--> <!--begin::Brand Text--> <span
-                class="brand-text fw-light">AdminLTE 4</span> <!--end::Brand Text--> </a>
+                class="brand-text fw-light">{{ env('APP_NAME', 'Laramim'); }}</span> <!--end::Brand Text--> </a>
         <!--end::Brand Link-->
     </div> <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
     <div class="sidebar-wrapper">
         <nav class="mt-2"> <!--begin::Sidebar Menu-->
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-                <li class="nav-item menu-open">
+                <li class="nav-item">
+                    <a href="{{ route('dashboard') }}" class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
+                        <i class="nav-icon bi bi-speedometer"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                {{-- <li class="nav-item {{ request()->is('dashboard') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon bi bi-speedometer"></i>
                         <p>
@@ -30,14 +36,21 @@
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li class="nav-header">DOCUMENTATIONS</li>
-                <li class="nav-item"> <a href="./docs/introduction.html" class="nav-link">
-                    <i class="nav-icon bi bi-download"></i>
-                        <p>Installation</p>
+                </li> --}}
+                <li class="nav-header text-uppercase">Management</li>
+                <li class="nav-item">
+                    <a href="{{ route('users.list') }}" class="nav-link">
+                        <i class="nav-icon bi bi-people-fill"></i>
+                        <p>Users</p>
                     </a>
                 </li>
-                <li class="nav-item"> <a href="#" class="nav-link"> <i
+                <li class="nav-item">
+                    <a href="{{ route('users.list') }}" class="nav-link">
+                        <i class="nav-icon bi bi-card-checklist"></i>
+                        <p>Roles</p>
+                    </a>
+                </li>
+                {{-- <li class="nav-item"> <a href="#" class="nav-link"> <i
                             class="nav-icon bi bi-ui-checks-grid"></i>
                         <p>
                             Components
@@ -54,7 +67,7 @@
                                 <p>Main Sidebar</p>
                             </a> </li>
                     </ul>
-                </li>
+                </li> --}}
 
             </ul> <!--end::Sidebar Menu-->
         </nav>
